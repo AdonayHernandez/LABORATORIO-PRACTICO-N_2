@@ -13,11 +13,6 @@ data class Orden(val cliente: String, val pupusas: List<Pupusa>) {
     }
 }
 
-fun main() {
-    val sistema = SistemaOrdenes()
-    sistema.mostrarMenu()
-}
-
 class SistemaOrdenes {
     private val ordenesPendientes: ArrayDeque<Orden> = ArrayDeque() // Cola para las órdenes pendientes
     private val ordenesDespachadas: ArrayDeque<Orden> = ArrayDeque() // Pila para las órdenes despachadas
@@ -126,4 +121,9 @@ class SistemaOrdenes {
             }
         }
     }
+}
+
+fun main() {
+    val sistema = SistemaOrdenes()
+    sistema.mostrarMenu()
 }
